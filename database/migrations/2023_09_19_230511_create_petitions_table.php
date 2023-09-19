@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('petitions', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('category');
+            $table->text('description');
+            $table->string('author');
+            $table->integer('signees');
             $table->timestamps();
         });
     }
